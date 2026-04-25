@@ -93,13 +93,13 @@ class PreprocessingPipeline:
         Path(path).parent.mkdir(parents=True, exist_ok=True)
         with open(path, 'wb') as f:
             pickle.dump(self, f)
-        print(f"  ✅ Pipeline saved → {path}")
+        print(f"  [OK] Pipeline saved -> {path}")
 
     @classmethod
     def load(cls, path: str) -> "PreprocessingPipeline":
         with open(path, 'rb') as f:
             pipeline = pickle.load(f)
-        print(f"  ✅ Pipeline loaded ← {path}")
+        print(f"  [OK] Pipeline loaded <- {path}")
         return pipeline
 
 
